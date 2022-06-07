@@ -5,9 +5,8 @@ This is a solution to the [REST Countries API with color theme switcher challeng
 ## Table of contents
 
 - [Overview](#overview)
-  - [IMUI Task](#the-challenge)
+  - [IMUI Task](#imui-task)
   - [Screenshot](#screenshot)
-  - [Building the theme](#building-theme)
   - [Quick Start ](#quick-start)
  
 
