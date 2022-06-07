@@ -1,0 +1,18 @@
+.imui{
+    &__heading{
+        color: $white;
+        position: relative;
+        padding-left: 50px;
+
+        &::before{
+            content: '';
+            position: absolute;
+            background-color: $green;
+            width: 30px;
+            left: 0px;
+            top: 0px;
+            bottom: 0px;
+            height: 100%;
+        }
+    }
+}

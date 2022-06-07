@@ -1,0 +1,19 @@
+.animation {
+    background: $shadow;
+    width: 100%;
+    height: 4px;
+
+    &__bar{
+        background: $darkergrey;
+        height: 4px;
+        transition: all linear 0.5s;
+        
+        &.fill-25{
+            width: 25%;
+        }
+
+        &.sucess{
+            background: $green;
+        }
+    }
+}

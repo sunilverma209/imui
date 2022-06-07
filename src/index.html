@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMUI</title>
+    <link rel="stylesheet" href="./assets/scss/main.scss">
+</head>
+<body class="imui">
+
+    <!-- Header Stripe -->
+    <header class="imui-header">
+        <nav class="navbar navbar-expand-lg imui-header__navbar">
+            <div class="container">
+                <div class="imui-header__logo imui-header__mobonly">
+                    <img src="./assets/images/logo.png" alt="Infomentum" >
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon fa fa-bars"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Web Development</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Consulting</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">UI/UX</a>
+                        </li>
+                    </ul>
+                    <div class="imui-header__logo">
+                        <img src="./assets/images/logo.png" alt="Infomentum" >
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- End of Header Stripe -->
+
+    <!-- Main Content Section -->
+    <main>
+        <section class="imui-form-section imui__darkbg">
+            <div class="container">
+                <div class="row">
+                    <div class="imui-form-wrapper">
+                        <div class="imui-form__card">
+                            <h1 class="imui__heading">Are you ready for a challenge?</h1>
+                            <div class="imui-form__box">
+
+                                <form name="imuichallenge" action="" method="post" id="form_imui_1" class="js-form-imui">
+
+                                    <!-- Form Header and stripe -->
+                                    <div class="imui-form__top">
+                                        <div class="imui-form__header">
+                                            <ul class="step_counter" id="step_main__bar">
+                                                <li class="name">STEP 1</li>
+                                                <li class="desc">Sign Up</li>
+                                            </ul>
+                                        </div>
+                                        <div class="animation">
+                                            <div class="animation__bar"></div>
+                                        </div>
+                                    </div>
+                                    <!-- End of form Header and Animation stripe -->
+
+                                    <div class="imui-form__steps" id="imui-form__steps">
+                                            <div class="rightgroup">
+                                                <div class="rightgroup__subheading" id="step_main__heading">
+                                                    Sign up to begin <br> your journey with us
+                                                </div>
+
+                                                <fieldset class="step js-step">
+                                                    <div class="imuiform js-form-fieldset">
+                                                        <div class="imui-field-row">
+                                                            <div class="imui-field-col imui-field-two-col input-group js-input-group">
+                                                                <span class="astrike">*</span>
+                                                                <input type="text" name="firstname" placeholder="First name" value="" class="js-form-control" data-validation="text" required>
+                                                            </div>
+                                                            <div class="imui-field-col imui-field-two-col input-group js-input-group">
+                                                                <span class="astrike">*</span>
+                                                                <input type="text" name="lastname" placeholder="Last name" value="" class="js-form-control" data-validation="text" required> 
+                                                            </div>
+                                                        </div>
+                                                        <div class="imui-field-row">
+                                                            <div class="imui-field-col imui-field-two-col input-group js-input-group">
+                                                                <span class="astrike">*</span>
+                                                                <input type="text" name="github_url" placeholder="Github URL" value="" class="js-form-control" data-validation="url" required> 
+                                                            </div>
+                                                            <div class="imui-field-col imui-field-two-col input-group js-input-group">
+                                                                <span class="astrike">*</span>
+                                                                <input type="email" name="email" placeholder="Email address" value="" class="js-form-control" data-validation="email" required> 
+                                                            </div>
+                                                        </div>
+                                                        <div class="imui-field-row">
+                                                            <div class="imui-field-col imui-field-two-col input-group js-input-group">
+                                                                <select class="js-form-control" name="country" data-validation="select" required>
+                                                                    <option value="">Select country</option>
+                                                                    <option value="uk">United Kigdom</option>
+                                                                    <option value="us">United States</option>
+                                                                    <option value="in">India</option>
+                                                                </select> 
+                                                            </div>
+                                                        </div>
+                                                        <hr>
+                                                        <div class="imui-field-row row-checkbox">
+                                                            <div class="imui-field-col checkbox input-group js-input-group">
+                                                                <label class="imui_checkbox">
+                                                                    I would like to receive information regarding this important message: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ac sem nunc. Ut luctus pretium enim et vulputate. Phasellus consequat lacus placerat, fringilla augue id, tristique sapien. In consectetur est vel malesuada egestas. Maecenas facilisis, sem nec bibendum ornare, orci neque maximus nulla, bibendum fermentum leo nisi ac turpis. Praesent ex eros, auctor hendrerit sodales at, dictum at ligula. Vivamus a lobortis magna.
+                                                                    <input type="checkbox" name="consent_receive_info" class="js-form-control" data-validation="checkbox" required>
+                                                                    <span class="imui_checkmark"></span>
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="imui-field-row row-checkbox">
+                                                            <div class="imui-field-col checkbox input-group js-input-group">
+                                                                <label class="imui_checkbox">
+                                                                    Allow us to take a peek at your code and ways of thinking
+                                                                    <input type="checkbox" name="consent_allow" class="js-form-control" data-validation="checkbox" required>
+                                                                    <span class="imui_checkmark"></span>
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </fieldset>
+
+                                                <fieldset class="step js-step">
+                                                    <div class="imuiform js-form-fieldset">
+                                                        <div class="imui-field-row">
+                                                            <div class="imui-field-col input-group js-input-group">
+                                                                <span class="astrike">*</span>
+                                                                <label>How did you get started with web development? </label>
+                                                                <textarea  name="webdevelopment" value="" class="js-form-control" required></textarea>
+                                                            </div>
+                                                        </div>
+                                                        <div class="imui-field-row">
+                                                            <div class="imui-field-col input-group js-input-group">
+                                                                <span class="astrike">*</span>
+                                                                <label>What do you enjoy about working on a Scrum team? </label>
+                                                                <textarea name="scrumteam" value="" class="js-form-control" required></textarea>
+                                                            </div>
+                                                        </div>
+                                                        <div class="imui-field-row">
+                                                            <div class="imui-field-col input-group js-input-group">
+                                                                <span class="astrike">*</span>
+                                                                <label>What technical trends are you most interested in?</label>
+                                                                <textarea name="technicaltrends" value="" class="js-form-control" required></textarea>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </fieldset>
+
+                                                <fieldset class="step js-step">
+                                                    <div class="imuiform js-form-fieldset">
+                                                        <div class="imui-field-row">
+                                                            <div class="imui-field-col input-group js-input-group js-input-range">
+                                                                <label>Javascript</label>
+                                                                <div class="imuirangeslider">
+                                                                    <div class="imuirangeslider__rangevalue rangeslider_javascript" ></div>
+                                                                    <input name="javascript" type="range" min="1" max="5" step="1" value="1" class="imuirangeslider__range js-form-control"  data-bubble="javascript"/>
+                                                                    <div class="imuirangeslider__steps"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="imui-field-row">
+                                                            <div class="imui-field-col input-group js-input-group js-input-range">
+                                                                <label>Cascading Stylesheets (CSS) & Sass/SCSS</label>
+                                                                <div class="imuirangeslider">
+                                                                    <div class="imuirangeslider__rangevalue rangeslider_css"></div>
+                                                                    <input name="css" type="range" min="1" max="5" step="1" value="1"  class="imuirangeslider__range js-form-control" data-bubble="css" />
+                                                                    <div class="imuirangeslider__steps"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="imui-field-row">
+                                                            <div class="imui-field-col input-group js-input-group js-input-range">
+                                                                <label>jQuery</label>
+                                                                <div class="imuirangeslider">
+                                                                    <div class="imuirangeslider__rangevalue rangeslider_jquery"></div>
+                                                                    <input name="jquery" type="range" min="1" max="5" step="1" value="1" class="imuirangeslider__range js-form-control" data-bubble="jquery"/>
+                                                                    <div class="imuirangeslider__steps"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </fieldset>
+
+                                                <fieldset class="step js-step" id="imui_answers">
+                                                    
+                                                </fieldset>
+                                                
+                                                
+                                            </div>
+                                            <div class="leftgroup">
+                                                <div class="form-leftgroup_img" id="step_main__image">
+                                                       <img src="./assets/images/Shiny_Happy_Standing_1.png" alt="Signup" class="imui_step_image imui_step_0_image active" />
+                                                       <img src="./assets/images/Shiny_Happy_Standing_2.png" alt="Tell us about yourself" class="imui_step_image imui_step_1_image hide" />
+                                                       <img src="./assets/images/Shiny_Happy_Standing_3.png" alt="Skills" class="imui_step_image imui_step_2_image hide" />
+                                                       <img src="./assets/images/Shiny_Happy_Avatar_4.png" alt="Review" class="imui_step_image imui_step_3_image hide" />
+
+                                                </div>
+                                            </div>
+                                    </div>
+
+                                    <div class="imui-form-sucess-wrap hide" id="imui-form-sucess-wrap">
+                                            <div class="imui-form-sucess">
+                                                <div class="imui-form-sucess__img">
+                                                    <img src="./assets/images/check_icon.png" alt="Check" />
+                                                </div>
+                                                <h2 class="imui-form-sucess__message">Your submission was received!</h2>
+                                                <p class="imui-form-sucess__submessage">Thank you, we will be in touch shortly</p>
+                                            </div>
+                                    </div>
+
+
+
+                                    <!-- Next / Previous Email -->
+                                    <div class="imui-form__footer form__pagination">
+                                        <div class="previous-step">
+                                            <button type="button" class="button button__light imui_js_prev ">Back</button>
+                                        </div>
+                                        <div class="next-step">
+                                            <button type="button" class="button imui_js_next js-multistep-btn" data-step-text="Next" data-final-step-text="Submit">Next</button>
+                                        </div>      
+                                    </div>
+                                    <!-- End -->
+
+                                </form>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- End of Main content section -->
+
+    <!-- Footer -->
+    <footer class="mt-auto text-white imui-dark imui-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md text-sm-end imui-footer__text">
+                    Copyright @ 2022. Some rights reserved.
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End of Footer -->
+
+    <script type="module" src="./assets/js/main.js"></script>
+</body>
+</html>

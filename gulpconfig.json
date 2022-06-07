@@ -1,0 +1,13 @@
+{
+    "paths": {
+        "js": "./src/assets/js",
+        "css": "./src/assets/css",
+        "img": "./src/assets/img",
+        "imgsrc": "./src/assets/images",
+        "sass": "./src/assets/sass",
+        "dist": "./dist",
+        "node": "./node_modules/",
+        "dev": "./assets",
+        "vendor": ""
+    }
+}

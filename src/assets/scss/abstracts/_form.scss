@@ -1,0 +1,480 @@
+/* Form */
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="tel"],
+input[type="date"],
+input[type="password"],
+textarea,
+select,
+.selectBox-dropdown {
+    padding: 10px 10px 10px 0px;
+    height: 50px;
+    width: 100%;
+    border-width: 0 0 2px;
+    background: $white;
+    border-radius: 0 !important; 
+    outline: none;
+    font-family: $ff-book;
+    font-size: 15px;
+    transition: all .3s;
+    border-bottom: 1px solid #959595;
+
+    @media (min-width: $md){
+        font-size: 16px;
+    }
+}
+
+textarea{
+    min-height: 80px;
+    border-width: 1px;
+    border: $border;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+/* Placeholders */
+input::placeholder,
+textarea::placeholder{
+    color: $form-placeholder;
+}
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder{
+    color: $form-placeholder;
+}
+input::-moz-placeholder,
+textarea::-moz-placeholder{
+    color: $form-placeholder;
+}
+input:-moz-placeholder,
+textarea:-moz-placeholder{
+    color: $form-placeholder;
+}
+input::-ms-input-placeholder,
+textarea::-ms-input-placeholder{
+    color: $form-placeholder;
+}
+
+
+.imui_checkbox{
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: $font-size-extra-small;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+  /* Hide the browser's default checkbox */
+  input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  /* Create a custom checkbox */
+  .imui_checkmark {
+    position: absolute;
+    top: 0px;
+    left: 4;
+    height: 20px;
+    width: 20px;
+    border: 1px solid $darkergrey;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  &:hover input ~ .imui_checkmark {
+    background-color: #ccc;
+  }
+  
+  /* When the checkbox is checked, add a blue background */
+  input:checked ~ .imui_checkmark {
+    background-color: $white;
+    border: 1px solid $darkergrey;
+  }
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .imui_checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the checkmark when checked */
+  input:checked ~ .imui_checkmark:after {
+    display: block;
+  }
+  
+  /* Style the checkmark/indicator */
+  .imui_checkmark:after {
+    left: 7px;
+    top: 3px;
+    width: 5px;
+    height: 10px;
+    border: solid $green;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+
+
+}
+
+.has-error{
+    .js-form-control{
+        border-bottom: 1px solid $form-error;
+    }
+
+    textarea{
+        &.js-form-control{
+            border: 1px solid $form-error;
+        }
+    }
+    .imui_checkbox{
+        .imui_checkmark{
+            border: 1px solid $form-error !important;
+        }
+    }
+}
+
+/* For steps */
+.imui-form{
+    &__box{
+        background-color : $white;
+        margin-top: 50px;
+        box-shadow: $boxshadow;
+    }
+    &__steps{
+        padding: 35px;
+        display: flex;
+
+        @media (max-width: $md){
+            display: block;
+            padding: 25px 20px;
+        }
+
+        .rightgroup{
+            width: 65%;
+            padding-right: 25px;
+
+            @media (max-width: $md){
+                width: 100%;
+                padding-right: 0px;
+            }
+        }
+
+        .leftgroup{
+            width: 35%;
+
+            @media (max-width: $md){
+                width: 100%;
+            }
+
+            .form-leftgroup_img{
+                text-align: center;
+                @media (max-width: $md){
+                    display: none;
+                }
+
+                img{
+                    @media (max-width: $md){
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    &__header{
+        ul{
+            padding: 20px 35px;
+            margin: 0px;
+            list-style: none;
+
+            li{
+                display: inline-block;
+                margin-right: 6px;
+                padding: 5px;
+                font-size: 15px;
+                line-height: 19px;
+                &.name{
+                    text-transform: uppercase;
+                    color: $light_black;
+                    border-right: 1px solid #2E2445;
+                    padding-right: 10px;
+                    font-weight: bold;
+                }
+                &.desc{
+                    color: $black_disabled;
+                }
+            }
+        }
+    }
+}
+
+
+.rightgroup{
+    &__subheading{
+        font-size: 35px;
+        line-height: 39px;
+        color: $green;
+        padding-bottom: 50px;
+
+        @media (max-width: $md){
+            font-size: 32px;
+        }
+    }
+}
+
+.form{
+    &__pagination{
+        padding: 20px 35px;
+        border-top: 1px solid $shadow;
+        margin-top: 15px;
+        display: flex;
+        justify-content: space-between;
+
+        @media (max-width: $md){
+            padding: 20px 20px;
+            flex-wrap: wrap;
+        }
+
+        .button{
+            @media (max-width: $md){
+                width: 100%;
+            }
+        }
+
+        .previous-step{
+            @media (max-width: $md){
+                order: 2;
+                width: 100%;
+            }
+        }
+
+        .next-step{
+            @media (max-width: $md){
+                order: 1; 
+                outline: 1px solid #5c5c5c;
+                width: 100%;
+                margin-bottom: 15px;
+            }
+        }
+    }
+}
+
+.imuiform{
+    .imui-field-row{
+        display: flex;
+        margin: 0 -15px;
+        margin-bottom: 25px;
+        width: 100%;
+
+        @media (max-width: $md){
+            flex-wrap: wrap;
+            margin-right: 0px;
+            margin-left: 0px;
+        }
+    }
+
+    .imui-field-col {
+        padding: 0 15px;
+        width: 100%;
+        padding-bottom: 35px;
+        position: relative;
+
+        @media (max-width: $md){
+            padding-right: 0px;
+            padding-left: 0px;
+        }
+
+        &.imui-field-two-col{
+            width: 50%; 
+
+            @media (max-width: $md){
+                width: 100%;
+                padding-right: 0px;
+                padding-left: 0px;
+            }
+        }
+    }
+
+    .row-checkbox{
+        .imui-field-col {
+            padding-bottom: 5px;
+        }
+    }
+
+    .astrike {
+        position: absolute;
+        right: 15px;
+        color: #FC4F00;
+        top: 0px;
+    }
+}
+
+.form__step_one{
+    .imui-field-row:last-child{
+        margin-bottom: 0px;
+    }
+}
+
+.step{
+    display: none;
+    &.is-active{
+        display: block;
+    }
+}
+
+
+
+.imuirangeslider{
+    width: 100%;
+    margin-top: 35px;
+    position: relative;
+
+    &__range{
+        -webkit-appearance: none;
+        width: 100%;
+        height: 15px;
+        outline: none;
+        opacity: 0.7;
+        -webkit-transition: .2s;
+        transition: opacity .2s;
+        background: #F7F7F7;
+        border: 1px solid #EBEBEB;
+        box-shadow: inset 0px 0px 3px rgba(0, 0, 0, 0.2);
+
+        &:hover{
+            opacity: 1;
+        }
+
+        &::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%; 
+            background: $green;
+            cursor: pointer;
+        }
+
+        &::-moz-range-thumb {
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            border: 2px solid gray;
+            background: $green;
+            cursor: pointer;
+        }
+    }
+
+    &__rangevalue{
+        position: absolute;
+        top: -30px;
+        display: none;
+
+        span{
+            width: 30px;
+            height: 24px;
+            line-height: 24px;
+            text-align: center;
+            background: $black;
+            color: $white;
+            font-size: 12px;
+            display: block;
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, 0);
+            border-radius: 0px;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+
+            &::before{
+                content: "";
+                position: absolute;
+                width: 0;
+                height: 0;
+                border-top: 10px solid $black;
+                border-left: 5px solid transparent;
+                border-right: 5px solid transparent;
+                top: 100%;
+                left: 50%;
+                margin-left: -5px;
+                margin-top: -1px;
+                box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+
+              }
+        }
+    }
+}
+
+
+#imui_answers{
+    height: 350px;
+    overflow-y: scroll;
+
+    ul {
+        list-style: none;
+        margin: 0px;
+        padding: 0px;
+
+        li{
+            display: inline-block;
+            width: 100%;
+            margin-bottom: 20px;
+            text-transform: unset;
+            font-size: 14px;
+
+            span{
+                color: #4C4C4C;
+                mix-blend-mode: normal;
+                opacity: 0.75;
+                width: 100%;
+                display: inline-block;
+                text-transform: capitalize;
+                font-size: 12px;
+                opacity: 0.75;
+            }
+        }
+    }
+
+}
+
+.imui-form-sucess-wrap{
+    &.hide{
+        display: none;
+    }
+
+    .imui-form-sucess{
+        margin: 0 auto;
+        max-width: 560px;
+        text-align: center;
+        padding: 150px 30px;
+
+        &__img{
+            margin-bottom: 50px;
+        }
+
+        &__message{
+            color: $green;
+            margin-bottom: 30px;
+        }
+
+        &__submessage{
+            color: $darkergrey;
+        }
+    }
+}
+
+.imui_step_image{
+    &.hide{
+        display: none;
+    }
+}

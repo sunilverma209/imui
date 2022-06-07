@@ -1,0 +1,49 @@
+.imui-header{
+    &__navbar{
+        background-color: $white;
+        padding-top: 0px;
+        padding-bottom: 0px;
+
+        .nav-item{
+            .nav-link{
+                font-size: 15px;
+                line-height: 22px;
+                color: $darkergrey;
+                padding: 35px 15px 35px 15px;
+                position: relative;
+
+                &.active{
+                    &::after{
+                        content: '';
+                        position: absolute;
+                        height: 4px;
+                        background-color: $green;
+                        right: 0px;
+                        left: 0px;
+                        bottom: 0px;
+                        width: 100%;
+                    }
+                }
+                &:hover{
+                    color: $green; 
+                    &::after{
+                        content: '';
+                        position: absolute;
+                        height: 4px;
+                        background-color: $green;
+                        right: 0px;
+                        left: 0px;
+                        bottom: 0px;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    &__mobonly{
+        display: none;
+    }
+
+
+}

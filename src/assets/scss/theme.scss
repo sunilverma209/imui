@@ -1,0 +1,9 @@
+.imui{
+    &__darkbg{
+        @include imui-dark-bg;
+        padding-top: 65px;
+        padding-bottom: 65px;
+    }
+}
+
+

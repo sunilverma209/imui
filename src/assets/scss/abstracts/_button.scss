@@ -1,0 +1,59 @@
+.button{
+    background: $darkergrey;
+    color: $white;
+    display: inline;
+    padding: 5px 30px;
+    border: none;
+    border-radius: 0px;
+    text-align: center;
+    text-decoration: none;
+    font-size: $font-size;
+    white-space: nowrap;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s;
+    min-width: 160px;
+    font-weight: bold;
+
+    @media (min-width: $md){
+        font-size: 16px;
+        line-height: 32px;
+    }
+    @media (min-width: $lg){
+        font-size: 18px;
+    }
+
+    &:hover,
+    &:focus{
+        background: $green;
+        color: $white;
+
+        @media (max-width: $md){
+            outline: 1px solid $green;
+        }
+        &::before{
+            left: 0%;
+            right: auto;
+            width: 100%;
+        }
+    }
+
+    &__light{
+        background: $white;
+        color: $charcoal;
+        outline: 1px solid $charcoal;
+
+        &:hover,
+        &:focus{
+            background: $shadow;
+            color: $charcoal;
+        }
+    }
+
+    &.disabled{
+        pointer-events:none;
+        
+    }
+}

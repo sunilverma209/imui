@@ -1,0 +1,25 @@
+// Modify Variable of bootstrap
+@import "./abstracts/variables";
+
+@import "~bootstrap/scss/bootstrap";
+
+
+// Override fontawsome default path
+$fa-font-path: "../../../node_modules/font-awesome/fonts";
+@import '~font-awesome/scss/font-awesome';
+
+// mixins
+@import "./mixins/bg_section";
+
+// Global brand
+@import "./abstracts/config";
+@import "./abstracts/heading";
+@import "./abstracts/button";
+@import "./abstracts/animation";
+@import "./abstracts/form";
+
+// Critical Styling
+@import "./abstracts/header";
+@import "./abstracts/footer";
+
+@import "./theme.scss";
